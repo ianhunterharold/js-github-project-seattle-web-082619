@@ -10,6 +10,7 @@ function main(){
   listenToFormInput();
   // grabUserData();
   // clickOnName();
+  hiddenButton();
 }
 
 function listenToFormInput (){
@@ -44,6 +45,53 @@ function iterateOverUsersBySearch(specificSearchData){
   }
 }
 
+function hiddenButton(){
+  createSecreteButton();
+  let hiddenButton = document.getElementById("secrete-button-id");
+  hiddenButton.addEventListener('mouseenter',(event)=>{
+  let firstScreen = window.prompt("First Challenge! Which is best for creating constant variables? Var, let or const?","tick tock, tick tock.");
+  let secondScreen = window.prompt("a list is the same as a queue","true or false?");
+    if (firstScreen === "const"){
+      // not kicking out if you fail the first answer like it want it to, two chained question
+      window.alert("good job!")
+      if(secondScreen === "false"){
+      }
+    } else {
+      window.alert("close but no cigar");
+    }
+  })
+  
+  
+
+  
+  
+  // if (firstScreen !== "const") {
+  //   window.alert("close but no cigar")
+  // } else {
+  //   window.alert("good job!")
+  // }
+
+}
+
+function createSecreteButton(){
+  let hiddenDiv = document.createElement('div');
+  hiddenDiv.setAttribute('id','hidden-div');
+  let secreteButton = document.createElement("button");
+  secreteButton.setAttribute('id','secrete-button-id')
+  secreteButton.innerText = "    "
+  hiddenDiv.append(secreteButton);
+  let repoList = document.getElementById("repos-list") 
+  repoList.appendChild(hiddenDiv);
+}
+// function placeMeOnPage(){
+// // programatically add her to the page 
+// let ian = document.createElement('img');
+// ian.setAttribute('src', 'ian.jpg');
+// ian.setAttribute('id', 'ian-image');
+// let githubContainer = document.getElementById("github-form");
+// githubContainer.append(ian);
+// }
+
 
 // function grabUserData(){
 //  //fetch get request on data
@@ -77,7 +125,7 @@ function displayUserData (individualAccount){
   let userUrlImg = document.createElement('img');
   userUrlImg.setAttribute('src',userURL);
   userUrlImg.setAttribute('alt',userName);
-  // userUrlImg.setAttribute('width',;
+  userUrlImg.setAttribute('width',"auto");
   userUrlImg.innerText = userURL;
   
 

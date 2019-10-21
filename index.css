@@ -11,3 +11,54 @@
 ul {
   list-style: none;
 }
+
+#search-button {
+  /* display: none; */
+  border-style: none;
+  background-color: Transparent;  /*heck yuuus! */
+  /* background-color: #4CAF50; */
+  padding: 40px 40px;
+  position: absolute;
+  /* border: 2px; */
+
+}
+
+img {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 150px;
+}
+
+/* body {
+  background-image: "../images/mom.jpg";
+  position: relative;
+} */
+
+Html, body {
+  /* placing the image in the background */
+  background-image: url('ian.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;  
+  /* parent needs to be relative to child which is absolute */
+} 
+
+#hidden-div {
+
+background-color: Transparent;
+border:none;
+
+}
+
+#secrete-button-id {
+  border: 10px;
+  background-color: transparent;
+  border:none;
+  padding: 40px 40px;
+  right: 500px;
+  top: 500px;
+  position: absolute;
+}
+
